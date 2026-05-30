@@ -1,5 +1,6 @@
-import { Github } from "@medusajs/icons";
 import { Button, Heading } from "@modules/common/components/ui";
+import LocalizedClientLink from "@modules/common/components/localized-client-link";
+
 const Hero = () => {
   return (
     <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
@@ -7,22 +8,22 @@ const Hero = () => {
         <span>
           <Heading
             level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
+            className="text-4xl leading-10 text-ui-fg-base font-semibold"
           >
-            Ecommerce Starter Template
+            JointLab Shop
           </Heading>
           <Heading
             level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
+            className="text-xl leading-8 text-ui-fg-subtle font-normal mt-4 max-w-2xl"
           >
-            Powered by Medusa and Next.js
+            Cuida tus articulaciones. Maximiza tu rendimiento. Acelera tu recuperación.
           </Heading>
         </span>
-        <a href="https://github.com/medusajs/dtc-starter" target="_blank">
-          <Button variant="secondary">
-            View on GitHub <Github />
+        <LocalizedClientLink href="/store">
+          <Button variant="primary">
+            Ver productos
           </Button>
-        </a>
+        </LocalizedClientLink>
       </div>
     </div>
   );
