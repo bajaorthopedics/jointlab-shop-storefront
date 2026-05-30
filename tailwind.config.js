@@ -20,6 +20,8 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
+        'joint-navy': '#0E2A47',
+          'joint-cyan': '#1AA6A0',
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",

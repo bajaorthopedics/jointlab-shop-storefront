@@ -20,7 +20,7 @@ const Hero = () => {
           </Heading>
         </span>
         <LocalizedClientLink href="/store">
-          <Button variant="primary">
+          <Button className="bg-joint-navy hover:bg-joint-cyan text-white border-none">
             Ver productos
           </Button>
         </LocalizedClientLink>
