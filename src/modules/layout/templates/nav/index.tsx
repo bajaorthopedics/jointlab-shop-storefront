@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import Image from "next/image"
 
 import { listLocales } from "@lib/data/locales"
 import { getLocale } from "@lib/data/locale-actions"
@@ -28,10 +29,10 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="flex items-center hover:opacity-80"
               data-testid="nav-store-link"
             >
-              JointLab Shop
+              <Image src="/logo-jl.png" alt="JointLab Shop" width={48} height={48} priority />
             </LocalizedClientLink>
           </div>
 
