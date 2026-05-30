@@ -18,7 +18,7 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-20 mx-auto border-b duration-200 bg-white border-ui-border-base">
+      <header className="relative h-24 mx-auto border-b duration-200 bg-white border-ui-border-base">
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
@@ -32,7 +32,7 @@ export default async function Nav() {
               className="flex items-center hover:opacity-80"
               data-testid="nav-store-link"
             >
-              <Image src="/logo-jl.png" alt="JointLab Shop" width={64} height={64} priority />
+              <Image src="/logo-jl.png" alt="JointLab Shop" width={80} height={80} priority />
             </LocalizedClientLink>
           </div>
 
