@@ -1,14 +1,9 @@
 import { listCategories } from "@lib/data/categories";
-import { listCollections } from "@lib/data/collections";
 import { Text, clx } from "@modules/common/components/ui";
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
-import MedusaCTA from "@modules/layout/components/medusa-cta";
 
 export default async function Footer() {
-  const { collections } = await listCollections({
-    fields: "*products",
-  });
   const productCategories = await listCategories();
 
   return (
@@ -27,7 +22,7 @@ export default async function Footer() {
             {productCategories && productCategories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Categories
+                  Categorías
                 </span>
                 <ul
                   className="grid grid-cols-1 gap-2"
@@ -82,63 +77,57 @@ export default async function Footer() {
                 </ul>
               </div>
             )}
-            {collections && collections.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
-                </span>
-                <ul
-                  className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
-                    {
-                      "grid-cols-2": (collections?.length || 0) > 3,
-                    }
-                  )}
-                >
-                  {collections?.slice(0, 6).map((c) => (
-                    <li key={c.id}>
-                      <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
-                        href={`/collections/${c.handle}`}
-                      >
-                        {c.title}
-                      </LocalizedClientLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
+              <span className="txt-small-plus txt-ui-fg-base">Soporte</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    GitHub
+                  <a href="#" className="hover:text-ui-fg-base">
+                    Contacto
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://docs.medusajs.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Documentation
+                  <a href="#" className="hover:text-ui-fg-base">
+                    Envíos
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://github.com/medusajs/dtc-starter"
+                  <a href="#" className="hover:text-ui-fg-base">
+                    Devoluciones
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="txt-small-plus txt-ui-fg-base">JointLab</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+                <li>
+                  
+                    href="https://jointlabinstitute.com"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
-                    Source code
+                    Clínica
+                  </a>
+                </li>
+                <li>
+                  
+                    href="https://instagram.com/jointlab_institute"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  
+                    href="https://web.facebook.com/profile.php?id=61590237517782"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Facebook
                   </a>
                 </li>
               </ul>
@@ -147,9 +136,8 @@ export default async function Footer() {
         </div>
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
-            © {new Date().getFullYear()} JointLab Shop. All rights reserved.
+            © {new Date().getFullYear()} JointLab. Todos los derechos reservados.
           </Text>
-          <MedusaCTA />
         </div>
       </div>
     </footer>
