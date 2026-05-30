@@ -22,7 +22,7 @@ export default async function Footer() {
             {productCategories && productCategories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Categorias
+                  Categorías
                 </span>
                 <ul
                   className="grid grid-cols-1 gap-2"
@@ -54,14 +54,14 @@ export default async function Footer() {
               <span className="txt-small-plus txt-ui-fg-base">Soporte</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li><a href="#" className="hover:text-ui-fg-base">Contacto</a></li>
-                <li><a href="#" className="hover:text-ui-fg-base">Envios</a></li>
+                <li><a href="#" className="hover:text-ui-fg-base">Envíos</a></li>
                 <li><a href="#" className="hover:text-ui-fg-base">Devoluciones</a></li>
               </ul>
             </div>
             <div className="flex flex-col gap-y-2">
               <span className="txt-small-plus txt-ui-fg-base">JointLab</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
-                <li><a href="https://jointlabinstitute.com" target="_blank" rel="noreferrer" className="hover:text-ui-fg-base">Clinica</a></li>
+                <li><a href="https://jointlabinstitute.com" target="_blank" rel="noreferrer" className="hover:text-ui-fg-base">Clínica</a></li>
                 <li><a href="https://instagram.com/jointlab_institute" target="_blank" rel="noreferrer" className="hover:text-ui-fg-base">Instagram</a></li>
                 <li><a href="https://web.facebook.com/profile.php?id=61590237517782" target="_blank" rel="noreferrer" className="hover:text-ui-fg-base">Facebook</a></li>
               </ul>
@@ -70,7 +70,7 @@ export default async function Footer() {
         </div>
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
-            (c) {new Date().getFullYear()} JointLab. Todos los derechos reservados.
+            © {new Date().getFullYear()} JointLab. Todos los derechos reservados.
           </Text>
         </div>
       </div>
